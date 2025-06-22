@@ -1,6 +1,5 @@
 public class LoggerDemo {
 
-    // Singleton Logger Class
     static class Logger {
         private static Logger instance;
 
@@ -10,7 +9,7 @@ public class LoggerDemo {
 
         public static Logger getInstance() {
             if (instance == null) {
-                instance = new Logger(); // Lazy initialization
+                instance = new Logger(); 
             }
             return instance;
         }
@@ -20,7 +19,6 @@ public class LoggerDemo {
         }
     }
 
-    // Main method to test Logger
     public static void main(String[] args) {
         Logger logger1 = Logger.getInstance();
         logger1.log("First log message");
