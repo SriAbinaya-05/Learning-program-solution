@@ -42,7 +42,7 @@ CREATE TABLE Employees (
     HireDate DATE
 );
 
--- STEP 3: Insert Sample Data
+
 INSERT INTO Customers (CustomerID, Name, DOB, Balance, LastModified)
 VALUES (1, 'John Doe', TO_DATE('1950-05-15', 'YYYY-MM-DD'), 12000, SYSDATE);
 
@@ -71,13 +71,10 @@ VALUES (2, 2, 3000, 6, SYSDATE, SYSDATE + 45);
 
 INSERT INTO Employees (EmployeeID, Name, Position, Salary, Department, HireDate)
 VALUES (1, 'Alice Johnson', 'Manager', 70000, 'HR', TO_DATE('2015-06-15', 'YYYY-MM-DD'));
--- STEP 4: Add IsVIP Column
 ALTER TABLE Customers ADD IsVIP VARCHAR2(5);
 
--- STEP 5: Enable DBMS_OUTPUT
 SET SERVEROUTPUT ON;
 
--- STEP 6: PL/SQL BLOCK
 DECLARE
     v_age NUMBER;
 BEGIN
